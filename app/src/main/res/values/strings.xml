@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">7MinutesWorkout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image">image</string>
+    <string name="str_start">START</string>
+    <string name="str_bmi">BMI</string>
+    <string name="congratulations">Congratulations!\nYou have finished the workout!</string>
+    <string name="quit">Are you sure you want to quit ?</string>
+    <string name="quit_message">This will stop your workout. You\'ve come this far, are you sure you want to quit ?</string>
+    <string name="weight_in_kg">WEIGHT (in kg)</string>
+    <string name="height_in_cm">HEIGHT (in cm)</string>
+
+    <string name="weight_in_lb">WEIGHT (in lb)</string>
+    <string name="height_in_inch">HEIGHT (in inch)</string>
+</resources>

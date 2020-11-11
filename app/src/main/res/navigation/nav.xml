@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/restFragment">
+    <fragment
+        android:id="@+id/restFragment"
+        android:name="small.app.a7minutesworkout.fragments.RestFragment"
+        android:label="RestFragment">
+        <action
+            android:id="@+id/action_restFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment" />
+        <argument
+            android:name="exercicesIndex"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="small.app.a7minutesworkout.fragments.ExerciseFragment"
+        android:label="ExerciseFragment">
+        <action
+            android:id="@+id/action_exerciseFragment_to_restFragment"
+            app:destination="@id/restFragment" />
+        <argument
+            android:name="exercicesIndex"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_exerciseFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="small.app.a7minutesworkout.fragments.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" />
+</navigation>

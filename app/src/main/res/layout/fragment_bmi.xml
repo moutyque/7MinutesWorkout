@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.bmiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="CALCULATE BMI"
+        android:textColor="@color/white"
+        android:textSize="@dimen/start_button_label_textsize"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radio_group"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbSI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/marging_small"
+            android:layout_weight="0.5"
+            android:background="@drawable/radio_btn_selected"
+            android:button="@null"
+            android:checked="true"
+            android:paddingStart="@dimen/marging_small"
+            android:text="SI Unit" />
+
+        <RadioButton
+            android:id="@+id/rbImp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marging_small"
+            android:layout_weight="0.5"
+            android:button="@null"
+            android:checked="false"
+            android:paddingStart="@dimen/marging_small"
+            android:text="Imperial Unit" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMetricUnitWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMetricUnitWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/weight_in_kg"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMetricUnitHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMetricUnitHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/height_in_cm"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/bimResilt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="Your BMI :"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvBMIResult"
+        style="@style/bimResilt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvBMICategory"
+        style="@style/bimResilt"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        style="@style/bimResilt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnBMICalculation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marging_small"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/marging_small"
+        android:background="@color/colorAccent"
+        android:text="CALCULATE"
+        android:textColor="@color/white" />
+
+</LinearLayout>
