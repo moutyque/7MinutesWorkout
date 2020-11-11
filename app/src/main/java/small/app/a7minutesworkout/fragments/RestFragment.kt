@@ -28,7 +28,7 @@ private lateinit var restTimer: CountDownTimer
  * create an instance of this fragment.
  */
 class RestFragment : Fragment() {
-    val timerTotal: Long = 2_000
+    val timerTotal: Long = 10_000
     val timerStep: Long = 1000
 
 

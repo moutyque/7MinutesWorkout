@@ -29,7 +29,7 @@ private lateinit var restTimer: CountDownTimer
  * create an instance of this fragment.
  */
 class ExerciseFragment : Fragment() {
-    val timerTotal: Long = 3_000
+    val timerTotal: Long = 25_000
     val timerStep: Long = 1000
     val args: ExerciseFragmentArgs by navArgs()
     lateinit var exerciseModel: ExerciseModel
@@ -91,7 +91,7 @@ class ExerciseFragment : Fragment() {
                 val actionExerciseFragmentToRestFragment =
                     ExerciseFragmentDirections.actionExerciseFragmentToRestFragment()
                 actionExerciseFragmentToRestFragment.exercicesIndex = args.exercicesIndex
-                
+
                 exercisesList[actionExerciseFragmentToRestFragment.exercicesIndex].isSelected =
                     false
                 exercisesList[actionExerciseFragmentToRestFragment.exercicesIndex].isCompleted =
